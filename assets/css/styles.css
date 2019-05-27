@@ -1,0 +1,14 @@
+.navbar.navbar-light.navbar-expand-md {
+  background-color: #340a00;
+  font-family: Lato, sans-serif;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 17px;
+}
+
+#broadway_logo {
+  width: 150px;
+}
+
