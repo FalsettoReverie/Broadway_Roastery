@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+     Filename: event_planner.html
+     Author:   Ying Ye (CST217)
+     Date:     5/21/2019
+     FileName: Event Planner
+     Purpose:
+-->
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Event Planner</title>
+
+   <link rel="icon" type="image/x-icon" href="img/logo.ico">
+
+
+   <link rel="stylesheet" href="style/event.css">
+   <link rel="stylesheet" href="style/mini-event-calendar.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+         crossorigin="anonymous">
+   <link rel="stylesheet" href="assets/css/footer.css">
+   <link rel="stylesheet" href="assets/css/navigation.css">
+   <link rel="stylesheet" href="assets/css/styles.css">
+   <!-- Demo Styles -->
+   <style>
+      body { background-color: #fafafa; font-family: 'Roboto' }
+      #wrapper{
+         margin: 20px auto;
+         max-width: 640px;
+      }
+
+      [id^=calendar],
+      [id^=calendar] + h3{
+         margin: auto auto;
+         width: 90%;
+         height: 80%;
+      }
+
+      [id^=calendar] + h3{
+         text-align: center;
+      }
+   </style>
+   <link rel="stylesheet" href="style/mini-event-calendar.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/css/bootstrapValidator.css">
+
+
+
+</head>
+<body>
+
+<!--<nav class="navbar navbar-default" role="navigation">-->
+   <!--<div class="container" >&lt;!&ndash; special "container" class in bootstrap you CANNOT nest container elements within other container elements  &ndash;&gt;-->
+      <!--<div class="navbar-header">-->
+
+         <!--&lt;!&ndash;  make the hamburger icon that will be used to toggle the nav menu&ndash;&gt;-->
+         <!--<button class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse"-->
+                 <!--type="button" aria-expanded="false">-->
+            <!--<span class="sr-only">Toggle navigation</span>&lt;!&ndash; bootstrap accessibility for screen reader only &ndash;&gt;-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+         <!--</button>-->
+         <!--<div class="row header">-->
+         <!--<div class="col-sm-2">-->
+         <!--<a class="navbar-brand" href="home.html">-->
+         <!--<img class="logo" src="img/logo.png" alt="BroadwayRoaster Logo" />-->
+         <!--</a>-->
+         <!--</div>-->
+         <!--<div class="col-sm-10">-->
+         <!--<img class="banner" src="img/header_image.png" alt="Banner" />-->
+         <!--</div>-->
+         <!--</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Add the items in the navbar&ndash;&gt;-->
+      <!--<div class="navbar-collapse collapse">-->
+
+         <!--<ul class="nav navbar-nav" role="menubar">-->
+         <!--<li role="menuitem"><a href="home.html">Home</a></li>-->
+         <!--<li role="menuitem"><a href="menu.html">Menu</a></li>-->
+         <!--<li role="menuitem"><a href="blog.html">Blog</a></li>-->
+         <!--<li role="menuitem"><a href="event_planner.html">Event Planner</a></li>-->
+         <!--<li role="menuitem"><a href="faq.html">FAQ</a></li>-->
+         <!--<li role="menuitem"><a href="calender.html">Calender</a></li>-->
+         <!--<li role="menuitem"><a href="about.html">About Us</a></li>-->
+         <!--<li role="menuitem"><a href="contact">Contact</a></li>-->
+         <!--</ul>-->
+      <!--</div>-->
+   <!--</div>-->
+<!--</nav>-->
+<div>
+   <img id="banner-image-main" class="img-fluid" src="assets/img/header_image_main.png">
+   <nav class="navbar navbar-light navbar-expand-md">
+      <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+         <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav flex-grow-1 justify-content-between">
+               <li class="nav-item" role="presentation"><a class="nav-link" href="#">Home</a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="menu.html">Menu</a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="#">Blog</a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="event_planner.html">Event Planner</a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="#">FAQ</a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="#">Careers</a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="#">About Us</a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+</div>
+
+<div class="container ">
+   <main role="main">
+      <section class="col-lg-7 " role="region">
+         <h2 class="rounded">Plan Your Event</h2>
+         <hr />
+         <form id="event" class="form-horizontal hidden-md-down" action="#" role="form" >
+            <div class="form-group">
+               <label class="control-label col-sm-3 col-lg-2 required" for="Name" >Name</label>
+               <div class="col-sm-9 col-lg-8">
+                  <div class="input-group">
+                     <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                     <input class="form-control" id="Name" name="Name" type="text" value="" minlength="2" maxlength="20" required />
+                  </div>
+               </div>
+            </div>
+            <div class="form-group">
+               <label class="control-label col-sm-3 col-lg-2 required" for="date">Event Date</label>
+               <div class="col-sm-9 col-lg-8">
+                  <div class="input-group">
+                     <span class="input-group-addon"><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i></span>
+                     <input class="form-control" id="date" name="date"  data-date-format="yyyy-mm-dd" required/>
+                  </div>
+               </div>
+            </div>
+            <div class="form-group">
+                  <label class="control-label col-sm-3 col-lg-2" for="EventTime">Time</label>
+                  <div class="col-sm-9 col-lg-8">
+                     <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-time" aria-hidden="true"></i></span>
+                        <input class="form-control" id="EventTime" name="EventTime" type="time" />
+                     </div>
+                  </div>
+            </div>
+            <div class="form-group">
+               <label class="control-label col-sm-3 col-lg-2" for="Attendees">Number Of Attendees</label>
+               <div class="col-sm-9 col-lg-8">
+                  <div class="input-group">
+                     <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i></span>
+                     <input class="form-control" id="Attendees" name="Attendees" type="number" min="0" max="20" value="0"/>
+                  </div>
+               </div>
+            </div>
+
+            <div class="form-group">
+               <label for="Email" class="control-label col-sm-3 col-lg-2 required">Email</label>
+               <div class="col-sm-9 col-lg-8">
+                  <div class="input-group">
+                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                     <input class="form-control" id="Email" name="Email" type="email" value="" required/>
+                  </div>
+               </div>
+            </div>
+            <div class="form-group">
+               <label class="control-label col-sm-3 col-lg-2 required" for="title">Topic</label>
+               <div class="col-sm-9 col-lg-8">
+                  <div class="input-group">
+                     <span class="input-group-addon"><i class="glyphicon glyphicon-bullhorn" aria-hidden="true"></i></span>
+                     <textarea class="form-control" id="title" name="title" required></textarea>
+                  </div>
+               </div>
+            </div>
+            <div class="form-group">
+               <label class="control-label col-sm-3 col-lg-2" for="Des">Description</label>
+               <div class="col-sm-9 col-lg-8">
+                  <div class="input-group">
+                     <span class="input-group-addon"></span>
+                     <textarea class="form-control" id="Des" name="Description"></textarea>
+                  </div>
+               </div>
+            </div>
+            <div class="form-group">
+               <label class="control-label col-sm-3 col-lg-2" >Open to Public</label>
+               <div class="col-sm-9 col-lg-8">
+                  <div class="input-group">
+                     <label class="radio-inline">
+                        <input type="radio"   name="public" value="Open to Public">Yes</label>
+                     <label class="radio-inline">
+                        <input type="radio" name="public" value="Not open to public">No</label>
+                  </div>
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="col-sm-offset-3 col-sm-3 col-lg-offset-2 col-lg-3">
+                  <input class="btn btn-primary btm-lg btn-block" type="submit" value="Send message" id="submitForm" />
+               </div>
+               <div class="col-sm-offset-3 col-sm-3 col-lg-offset-2 col-lg-3">
+                  <input class="btn btn-primary btm-lg btn-block" type="reset" value="Reset" id="resetForm" />
+               </div>
+            </div>
+         </form>
+      </section>
+      <!-- Recent Event Display-->
+      <section class="col-lg-5" role="region">
+
+         <h2 class="rounded">Recent Event</h2>
+         <hr />
+         <div id="jquery-script-menu" class="hidden-md-down">
+
+            <div id="wrapper">
+               <div>
+                  <div id="calendar"></div>
+               </div>
+            </div>
+            <script
+                    src="http://code.jquery.com/jquery-3.4.1.min.js"
+                    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                    crossorigin="anonymous"></script>
+
+            <script src="script/mini-event-calendar.js"></script>
+         </div>
+         <div id="results_display">
+         </div>
+      </section>
+   </main>
+</div>
+
+<div class="footer-dark">
+   <footer>
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12 col-xl-3 offset-1 offset-sm-0" id="logo-container"><img class="img-fluid" id="broadway_logo" src="assets/img/broadway_logo.png"></div>
+            <div class="col-md-6 col-xl-6 offset-xl-0 item text">
+               <h3>Broadway Roastery</h3>
+               <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.&nbsp;</p>
+            </div>
+            <div class="col-xl-3 offset-xl-0 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+         </div>
+         <p class="copyright">Broadway Roastery © 2019</p>
+      </div>
+   </footer>
+</div>
+   <script src="script/moment.js"></script>
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+           integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+           crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+   <script src="script/event.js"></script>
+   <script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#event').submit(function () {
+
+            return false;
+        });
+        $('#resetForm').on('click',function () {
+            $('#event').bootstrapValidator('resetForm', true);
+        });
+
+        $('#date').datepicker({
+            startDate: new Date()
+        });
+    })
+   </script>
+</body>
+</html>

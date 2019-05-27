@@ -1,0 +1,43 @@
+/*
+File Name: event
+Date:      5/22/2019
+Author:    Ying Ye (CST217)
+Purpose:
+*/
+
+/*main section:first-child {*/
+    /*border-right: dotted 5px rgb(110,78,55);*/
+/*}*/
+
+#results_display li {
+    margin:0 15px;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+
+form .required:before {
+    color: red;
+    content: "* ";
+}
+
+/*.hidden-md-down {*/
+    /*display: block;*/
+/*}*/
+
+@media screen and (max-width:768px) {
+     hr+form{
+        display: none;
+    }
+
+    h2 {
+        border-radius: 10px;
+        background: #62320f;
+        color:white;
+        text-align: center;
+    }
+
+    h2:first-of-type:hover + hr+form{
+        display: block;
+    }
+}
