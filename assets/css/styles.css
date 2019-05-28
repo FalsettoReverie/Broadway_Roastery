@@ -1,6 +1,7 @@
 body {
   font-family: Montserrat, sans-serif;
   font-weight: normal;
+  background-color: #edd3b5;
 }
 
 @media (min-width: 767px) {
