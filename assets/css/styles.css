@@ -1,17 +1,102 @@
-.navbar.navbar-light.navbar-expand-md {
-  background-color: #340a00;
-  font-family: Lato, sans-serif;
+body {
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
 }
 
-.navbar-light .navbar-nav .nav-link {
+@media (min-width: 767px) {
+  .nav.navbar-nav {
+    margin: 0 auto;
+    display: table;
+    table-layout: auto;
+    float: none;
+    width: 100%;
+  }
+}
+
+.navbar.navbar-default {
+  background-color: #340a00;
+  background-image: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-default .navbar-nav > li > a {
   color: white;
   font-size: 17px;
 }
 
-#broadway_logo {
-  width: 150px;
+@media (min-width: 767px) {
+  .navbar-nav > li {
+    display: table-cell;
+    float: none;
+    text-align: center;
+  }
 }
 
-.navbar-toggler {
-  background-color: #904f2f;
+@media (max-width: 767px) {
+  #banner-desktop {
+    display: none;
+  }
 }
+
+@media (min-width: 767px) {
+  #banner-mobile {
+    display: none;
+  }
+}
+
+.navbar-default .navbar-toggle {
+  float: left;
+}
+
+#banner-mobile {
+  margin-top: -20px;
+}
+
+#logo-main {
+  width: 117px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+#footer-copyright {
+  font-size: 0.8em;
+}
+
+#footer-container {
+  background-color: #663202;
+  color: rgb(255,255,255);
+}
+
+@media (min-width: 767px) {
+  #footer-container {
+    margin-top: 0px;
+  }
+}
+
+.social-icons {
+  color: #313437;
+  text-align: center;
+  padding: 40px 0;
+}
+
+@media (max-width:767px) {
+  .social-icons {
+    padding: 10px 0;
+  }
+}
+
+.social-icons i {
+  font-size: 30px;
+  display: inline-block;
+  color: #ffffff;
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 50px;
+}
+
