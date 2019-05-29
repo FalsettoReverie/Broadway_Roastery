@@ -220,14 +220,19 @@
         $('#date').datepicker({
             startDate: new Date()
         });
+        $(window).resize(checkPosition());
 
-        // $('h2:first').hover(function () {
-        //     $('form').css("display","block")
-        //     },
-        //     function () {
-        //         $('form').css("display","none");
-        //     }
-        // )
+        function checkPosition() {
+            if($(document).width()<767)
+            {
+                $('h2:first').click(function () {
+                        $('form').toggle();
+                    }
+                )
+            }
+
+        }
+
     })
    </script>
 </body>

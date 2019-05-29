@@ -336,7 +336,7 @@ $('document').ready(function () {
     });
     checkPositon();
     function checkPositon() {
-        if (window.matchMedia('(max-width: 767px)').matches) {
+        if ($(document).width() < 767) {
             $("ul li",".main").addClass("list-inline-item");
             $("ul",".main").addClass("list-inline")
         }
@@ -356,7 +356,9 @@ $('document').ready(function () {
     $(".left").click(function(){
         $("#myCarousel").carousel("prev");
     });
-
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
 })
 </script>
 </body>
