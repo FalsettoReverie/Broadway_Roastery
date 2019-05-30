@@ -5,7 +5,7 @@
      Author:   Ying Ye (CST217)
      Date:     5/21/2019
      FileName: Event Planner
-     Purpose:
+     Purpose:  Use the form to collect event information and display on calendar.
 -->
 <head>
    <meta charset="UTF-8">
@@ -22,6 +22,7 @@
    <link rel="stylesheet" href="assets/css/styles.css">
    <!-- Demo Styles -->
    <style>
+
       #wrapper{
          margin: 20px auto;
          max-width: 640px;
@@ -208,22 +209,24 @@
    <script src="script/event.js"></script>
    <script type="text/javascript">
     $(document).ready(function () {
-
+         //prevent the form submit
         $('#event').submit(function () {
 
             return false;
         });
+        //reset the form validator
         $('#resetForm').on('click',function () {
             $('#event').bootstrapValidator('resetForm', true);
         });
-
+        //set datepicker start from today.
         $('#date').datepicker({
             startDate: new Date()
         });
-        $(window).resize(checkPosition());
+
+        checkPosition();
 
         function checkPosition() {
-            if($(document).width()<767)
+            if(window.matchMedia('(max-width: 768px)').matches)
             {
                 $('h2:first').click(function () {
                         $('form').toggle();
