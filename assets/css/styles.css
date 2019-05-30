@@ -101,3 +101,9 @@ body {
   line-height: 50px;
 }
 
+@media (max-width: 767px) {
+  #main-intro {
+    background-position: center;
+  }
+}
+
