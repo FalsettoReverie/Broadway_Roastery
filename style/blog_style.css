@@ -1,8 +1,3 @@
-body{
-    font-family: Arial;
-
-    background: #ffe8d0;
-}
 
 
 .header{
@@ -77,9 +72,7 @@ body{
 .Title{
     margin-top: 30px;
 }
-body{
-    letter-spacing: 2px;
-}
+
 
 .card > h2  {
 
