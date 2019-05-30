@@ -37,7 +37,7 @@ form .required:before {
         text-align: center;
     }
 
-    /*h2:first-of-type:hover + hr+form,h2:first-of-type+ hr+form{*/
-        /*display: block;*/
-    /*}*/
+    h2:first-of-type:hover + hr+form,h2:first-of-type+ hr+form{
+        display: block;
+    }
 }
