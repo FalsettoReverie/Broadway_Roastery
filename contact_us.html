@@ -10,15 +10,6 @@
     <link rel="stylesheet" href="style/contact_us_styles.css">
 
 
-    <style>
-        .navbar-brand img {
-            max-height: 2em;
-            margin-top: -.6em;
-            display:  inline;
-        }
-    </style>
-
-
 </head>
 <body>
 
@@ -47,21 +38,23 @@
 
 <div class="container">
 
+    <div class="Title">
     <div class="row">
         <div class="text-center">
             <p>Contact Us</p>
         </div>
+    </div>
     </div>
 
 
 
     <div class="row justify-content-center">
         <div class="text-center">
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-lg-6">
                 <span class="input_group_addon" ><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> </span>
             </div>
 
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-lg-6">
 
                 <span class="input_group_addon" ><i class="glyphicon glyphicon-book" aria-hidden="true"></i> </span>
             </div>
@@ -70,12 +63,12 @@
 
     <div class="row justify-content-center">
         <div class="text-center">
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-lg-6">
                 <p class="emailStaff">Like our breverages?<br> Like our customer staff? <br> Want to make any suggestions?<br>  Leave us an email!</p>
             </div>
         </div>
         <div class="text-center">
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-lg-6">
                 <p class="emailStaff">Want to book an event for that special occasion? <br> Do so now!</p>
             </div>
         </div>
@@ -85,13 +78,21 @@
 
     <form>
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-md-6">
                 <div class="form-group">
+
+
+                    <div class="row">
+
+                        <i class="glyphicon glyphicon-envelope" id="mobileEnvelope" aria-hidden="true"></i><div class="mobileDescription">
+                        <p>Send us an email for opinions, thoughts, reviews, or any other miscellaneous matters.</p>
+                    </div></div>
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We won't send offers </small>
                 </div>
                 <div class="form-group">
+                    <div class="row">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" placeholder="Enter Name">
                 </div>
@@ -106,8 +107,15 @@
 
             </div>
 
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-md-6">
             <div class="form-group">
+
+                <div class="row">
+
+                <i class="glyphicon glyphicon-book" id="mobileBook" aria-hidden="true"></i>
+                    <div class="mobileDescription">
+                        <p>Want to sign up for special promotions/events? Sign up now!</p>
+                    </div></div>
                 <label for="name1">Name</label>
                 <input type="text" class="form-control" id="name1" placeholder="Enter Name">
             </div>
@@ -115,9 +123,15 @@
                 <label for="phone">Phone</label>
                 <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
             </div>
+                <div class="form-group">
+                    <label for="email2">Email address</label>
+                    <input type="email" class="form-control" id="email2" aria-describedby="emailHelp2" placeholder="Enter email">
+                    <small id="emailHelp2" class="form-text text-muted">We won't send offers </small>
+                </div>
             <div class="form-group">
-                <label for="date">Meeting Date</label>
-                <input type="date" class="form-control" id="date" placeholder="Enter Date you want appointment at">
+                <label for="date">Birth Date</label>
+                <input type="date" class="form-control" id="date" aria-describedby="birthDate">
+                <small id="birthDate" class="form-text text-muted">Come in on your birthday to receive premium discounts! </small>
             </div>
             <div class="form-group">
                 <label for="message1">Message</label>
@@ -131,8 +145,8 @@
 
 
         </div>
+        </div>
     </form>
-    <h3 id="mobileOnly">Click to expand</h3>
 
 
 </div>
@@ -160,5 +174,7 @@
 </div>
 </body>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

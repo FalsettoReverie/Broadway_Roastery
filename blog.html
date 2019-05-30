@@ -15,21 +15,22 @@
     <img class="img-responsive" id="banner-desktop" src="assets/img/header_image_main.png">
 
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".myNavBar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Broadway Cafe</a>
-            </div>
-            <div class="collapse navbar-collapse" class="myNavbar">
+    <nav class="navbar navbar-default">
+        <div class="navbar-wrapper">
+
+            <div class="navbar-header"><button data-toggle="collapse" class="navbar-toggle collapsed" data-target="#navcol-1" style="margin-left: 9px;"><span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li class="active"><a href="#">About</a></li>
-                    <li class="active"><a href="#">Menu</a></li>
+
+                    <li role="presentation"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">Menu</a></li>
+                    <li role="presentation"><a href="#">Blog</a></li>
+                    <li role="presentation"><a href="#">Event Planner</a></li>
+                    <li role="presentation"><a href="#">FAQ</a></li>
+                    <li role="presentation"><a href="#">Careers</a></li>
+                    <li role="presentation"><a href="#">About Us</a></li>
+                    <li role="presentation"><a href="#">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -38,6 +39,8 @@
 </header>
 </div>
 
+
+<div class="container-fluid">
 <div class="header">
     <h2>Coffee Insights</h2>
 </div>
@@ -45,7 +48,7 @@
 <div class="row">
     <div class="leftcolumn">
         <div class="card">
-            <h2>The Broadway Roastery</h2>
+            <h2>The Broadway Roastery Blog</h2>
             <h3>Who are we and what do we do</h3>
             <img src="coffee.png" alt="The Broadway Cafe" width="50%" height="50%">
             <p>Hi, I'm Simon a Web designer for the Broadway Roastery. You might be wondering how I ended up at this job. Well you see
@@ -54,21 +57,49 @@
             in a career that favors both spectrums of what I love to do (Drink coffee and write some great code!) I designed this site to give
             everyone a chance to fully enjoy a great cup of coffee</p>
         </div>
+
+        <div class="card">
+            <h2>Coffee: The drink of gods</h2>
+
+            <img src="img/coffee2.jpg" height="50%" width="50%"/>
+            <p>Coffee is a plant (Coffea) and the name of the drink that is made from this plant. The coffee plant is a bush or
+                tree that can grow up to ten meters (about 32 feet) high, but is usually cut shorter. Coffee plants originally
+                grew in Africa, and now also grow in South America, Central America and Southeast Asia. They are an important
+                crop for the economies of many countries. The first branded coffee to be sold commercially to the public was
+                Nes Café in 1879 The drink is made from the seeds of the coffee plant, called coffee beans. Coffee is usually
+                served hot, and is a popular drink in many countries. Coffee contains a chemical called caffeine, a mild drug
+                that keeps people awake.</p>
+
+        </div>
+
+        <div class="card">
+            <h2>A video about coffee</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="50%" height="50%" src="https://www.youtube.com/embed/OTVE5iPMKLg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>reen></iframe>
+            </div>
+        </div>
     </div>
     <div class="rightcolumn">
         <div class="card">
             <h2>About Us</h2>
-            <div class="image1" style="height: 100px;">Image</div>
+            <img src="img/logo.png" height="50%" width="50%"/>
             <p>We are a group of computer science students at sask polytech who decided that it was a great idea to recreate the <bold>entire</bold> website from scratch. Despite the
             fact that we are still students I think that it's safe to say that we did a pretty great job in creating this website. (Also If you don't like coffee, the door is to the left
                 . You can kindly exit the premises)</p>
         </div>
         <div class="card">
-            <h3>Contact Us</h3>
+            <h3>Come on down!</h3>
             <p> If your looking for a great time, come on down to the Broadway Roastery... on broadway avenue (Get it... the name is based on the street that we currently reside)</p>
         </div>
 
+        <div class="card">
+            <h3>Navigation</h3>
+            <p>We've got a great of selection of coffee from across the world. We also offer other beverages besides coffee for those
+            who do not like that burnt taste in their mouth early in the morning. </p>
+        </div>
+
     </div>
+</div>
 </div>
 
 <div class="row">
@@ -78,5 +109,7 @@
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

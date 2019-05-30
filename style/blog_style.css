@@ -24,6 +24,16 @@ body{
     padding: 20px;
     float: left;
     width: 25%;
+
+}
+
+.card > p{
+    background-color: #bea395;
+}
+
+.card > h2{
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .image1{
@@ -50,11 +60,48 @@ body{
     float: none;
     width: 100%;
 }
+.navbar.navbar-default {
+    background-color: #340a00;
+    background-image: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
 
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    font-size: 17px;
+}
+
+.Title{
+    margin-top: 30px;
+}
+body{
+    letter-spacing: 2px;
+}
+
+.card > h2  {
+
+    padding-bottom: 20px;
+    color: white;
+    background-color: #321409;
+
+}
+
+.card > p {
+    margin-top: 50px;
+    font-size: 1.5em;
+}
 
 @media screen and (max-width: 768px) {
     .leftcolumn, .rightcolumn {
         width: 100%;
         padding: 0;
+    }
+
+    body{
+        letter-spacing: 2px;
+        word-spacing: 2px;
     }
 }

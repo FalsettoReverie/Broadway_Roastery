@@ -41,7 +41,9 @@
    background-color: #460c11;
 }
 
-
+.mobileDescription{
+    display: none;
+}
 
 #footer-copyright{
     font-size: 80%;
@@ -68,16 +70,39 @@ body{
     padding-top: 30px;
 }
 
+
+.Title{
+    background-color: #2f0c04;
+    color: #edd3b5;
+}
+
+
+.row{
+    padding-left: 5%;
+}
 #mobileOnly
 {
     display: none;
 }
 
 
+
 @media screen and (max-width: 767px){
     #logo-main{
         height: 20%;
         width: 20%;
+    }
+
+    .mobileDescription{
+        display: block;
+    }
+
+    .emailStaff{
+        display: none;
+    }
+
+    .input_group_addon{
+        display: none;
     }
 
 
@@ -92,23 +117,10 @@ body{
     }
 
 
-    #mobileOnly
-    {
-        display: contents;
-        border-radius: 10px;
-        background-color: #62320f;
-        color:white;
-        text-align: center;
-    }
-    form{
-        display: none;
 
-    }
 
-    #mobileOnly:hover + form{
-        display: block;
-    }
 
+    .gl
 
 
 
