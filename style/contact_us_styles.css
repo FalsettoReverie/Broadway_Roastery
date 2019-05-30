@@ -45,11 +45,17 @@ body{
 
 
 .col-md-6 .row{
-    padding-left: 5%;
+    padding-left: 2.5%;
 }
+
 #mobileOnly
 {
     display: none;
+}
+
+.addInfo{
+    margin-left: 50px;
+    margin-top: 90px;
 }
 
 
