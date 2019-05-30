@@ -208,22 +208,24 @@
    <script src="script/event.js"></script>
    <script type="text/javascript">
     $(document).ready(function () {
-
+         //prevent the form submit
         $('#event').submit(function () {
 
             return false;
         });
+        //reset the form validator
         $('#resetForm').on('click',function () {
             $('#event').bootstrapValidator('resetForm', true);
         });
-
+        //set datepicker start from today.
         $('#date').datepicker({
             startDate: new Date()
         });
-        $(window).resize(checkPosition());
+
+        checkPosition();
 
         function checkPosition() {
-            if($(document).width()<767)
+            if(window.matchMedia('(max-width: 768px)').matches)
             {
                 $('h2:first').click(function () {
                         $('form').toggle();

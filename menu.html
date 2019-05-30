@@ -18,8 +18,29 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
    <link rel="stylesheet" href="assets/css/styles.css">
    <style>
+      /*<!--menu catelog background -->*/
       .main ul li {
          background-color: #edd3b5;
+      }
+      /*menu table header style*/
+      th {
+         background: gold;
+         text-align: center;
+         font-size: 1.2em;
+         font-family: "Arial Black",sans-serif;
+      }
+      /*menu table style*/
+      td {
+         font-family: cursive,sans-serif;
+      }
+      /*menu table row style*/
+      tr:nth-of-type(even) {
+         background: lightgray;
+      }
+      /*carousel img style*/
+      .item img {
+         width: 100%;
+         height: 100%;
       }
 
       @media screen and (min-width:768px) {
@@ -31,13 +52,12 @@
              padding-top: 20px;
           }
 
-         .main img {
-            height: 700px;
-         }
+
       }
       .main p {
          text-align: center;
       }
+
 
    </style>
 </head>
@@ -68,7 +88,7 @@
 <div>
    <div class="container main">
       <div class="row">
-         <div class="col-sm-3 col-xl-6">
+         <div class="col-sm-3 col-md-3 col-xl-3">
             <ul class="list-group list-group-flush">
                <li id="coffee" class="list-group-item list-group-item-action" >Coffee</li>
                <li id="tea" class="list-group-item list-group-item-action float-left">Tea</li>
@@ -77,10 +97,10 @@
 
          </div>
          <div class="col-md-6 col-xl-6 offset-xl-0 item text">
-            <h3>Broadway Roastery</h3>
+            <h3 class="col-sm-12 col-md-12 col-lg-12">Broadway Roastery</h3>
             <p id="menuContent">&nbsp;</p>
          </div>
-         <div class="col-sm-3 col-xl-3 ">
+         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3 col-xl-3">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                <!-- Indicators -->
                <ol class="carousel-indicators">
@@ -91,15 +111,15 @@
                <div class="carousel-inner" role="listbox">
                   <div class="item active">
                      <img  src="img/nathan-dumlao-1555005-unsplash.jpg"
-                          alt="First slide">
+                          alt="Cafe Maker">
                   </div>
                   <div class="item">
                      <img  src="img/clifford-yeo-452260-unsplash.jpg"
-                          alt="Second slide">
+                          alt="Store Front">
                   </div>
                   <div class="item">
                      <img  src="img/nathan-dumlao-1555017-unsplash.jpg"
-                          alt="Third slide">
+                          alt="Server">
                   </div>
                </div>
                <a class="left carousel-control" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -141,6 +161,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script>
    "use strict";
+   //cafe menu content
    let cafeMenu=`<div>
                <table class="table table-hover">
                <thead class="bg-warning">
@@ -226,6 +247,7 @@
                <div>
 
 </div>`;
+   //tea menu style
    let teaMenu=`<div>
 <table class="table table-hover">
                <thead class="bg-warning">
@@ -261,6 +283,7 @@
 </tbody>
 </table>
 </div>`
+   //cold drink menu content
    let coldMenu=`<div>
 <table class="table table-hover">
                <thead class="bg-warning">
@@ -313,37 +336,32 @@ used, resulting in a pure coffee concentrate.</td>
 </table>
 </div>`
 $('document').ready(function () {
+    //add content to menu area
     $("#menuContent").html(cafeMenu);
+    //focus on coffee category when load the page
     $("#coffee").addClass("active");
+    //when click coffee category, focus move to this item
     $("#coffee").on("click",function () {
         $("#menuContent").html(cafeMenu);
         $("#tea").removeClass("active");
         $("#cold").removeClass("active");
         $(this).addClass("active");
     });
+    //when click tea category, focus move to this item
     $("#tea").on("click",function () {
         $("#coffee").removeClass("active");
         $("#cold").removeClass("active");
         $("#menuContent").html(teaMenu);
         $(this).addClass("active");
     });
+    //when click cold drink category, focus move to this item
     $("#cold").on("click",function () {
         $("#menuContent").html(coldMenu);
         $("#coffee").removeClass("active");
         $("#tea").removeClass("active");
         $(this).addClass("active");
     });
-    checkPositon();
-    function checkPositon() {
-        if ($(document).width() < 767) {
-            $("ul li",".main").addClass("list-inline-item");
-            $("ul",".main").addClass("list-inline")
-        }
-        else {
-            $("ul li",".main").removeClass("list-inline-item");
-            $("ul",".main").removeClass("list-inline")
-        }
-    }
+
     $("#myCarousel").carousel();
 
 // Enable Carousel Indicators
