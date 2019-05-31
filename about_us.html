@@ -51,20 +51,54 @@
 
     <div class="row">
         <div class="text-left">
-            <p>Broadway Roastery has been a proud establishment for XX years. We import only the finest variety of Coffees for our product. We have always believed that the best quality coffee comes from individual care and  attention that you wont find at a common coffee chain establishment. We ground our own coffee on location and offer a variety of blends suited to your liking.</p>
+            <p>Broadway Roastery has been a proud establishment for XX years. We import only the finest variety of Coffees for our product. We have always believed that the best quality coffee comes from individual care and  attention that you wont find at a common coffee chain establishment. We ground our own coffee on location and offer a variety of blends suited to your liking.<br><br>A map of our locations is below, see your location relative to us.</p>
         </div>
 
         <div class="row">
             <div class="col-md-6">
 
-                    <div class="container">
-                        <img src="img/outside_mural.jpg" class="img-responsive" alt="outdoor mural">
-                    </div>
-            </div>
-            <div class="col-md-6">
+                <div id="myMap"></div>
+                <script>
+                    let map;
+                    function initMap() {
+                        if (navigator && navigator.geolocation) {
+                            // make asynchronous call to getCurrentPosition and when it returns, call handlePosition
+                            navigator.geolocation.getCurrentPosition(handlePosition);
+                        } else {
+                            // browser is too old
+                            alert("get a new browser");
+                        }
+                    }
 
-                    <div class="container" >
-                        <iframe src="https://www.google.com/maps/d/embed?mid=157yJHpOZq_xKIIzFGhIul_mWl9_6l3V3" width="640" height="480"></iframe>
+                    function handlePosition(position) {
+                        let myLat = position.coords.latitude;
+                        let myLong = position.coords.longitude;
+						var image = 'assets/img/map_logo.png';
+
+                        let myCenter = new google.maps.LatLng(myLat, myLong);
+                        let broadway = new google.maps.LatLng(52.120059, -106.657417);
+                        let eighthStreet = new google.maps.LatLng(52.114478, -106.620093);
+                        map = new google.maps.Map(document.getElementById('myMap'), {
+                            center: {lat: 52.118059, lng: -106.635093},
+                            zoom: 12
+                        });
+                        let markerA = new google.maps.Marker({position: broadway});
+						var beachMarker = new google.maps.Marker({position: broadway, map: map, icon: image});
+                        let markerB = new google.maps.Marker({position: eighthStreet});
+                        var beachMarker = new google.maps.Marker({position: eighthStreet, map: map, icon: image});
+						let markerC = new google.maps.Marker({position: myCenter});
+                        markerA.setMap(map);
+                        markerB.setMap(map);
+                        markerC.setMap(map);
+                    }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI2iptB1z_XixdX1m7DZXGcsIBh7o2-LI&callback=initMap"
+                        async defer></script>
+            </div>
+			<div class="col-md-6">
+
+                    <div class="container">
+                        <img class="img-responsive" src="img/outside_mural.jpg" class="img-responsive" alt="outdoor mural">
                     </div>
             </div>
 
